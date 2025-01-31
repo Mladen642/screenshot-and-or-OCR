@@ -39,5 +39,6 @@ A Python script that captures a screen region based on user-defined coordinates,
 3) If you choose to extract text:
 
   • The extracted text will be displayed in the console.
+  
   • A .txt file containing the text will be saved in the output/ directory.
 
