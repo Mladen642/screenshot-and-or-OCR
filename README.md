@@ -24,8 +24,22 @@ A Python script that captures a screen region based on user-defined coordinates,
 1) Clone the repository
 2) Install the required dependencies
 3) Install Tesseract OCR (https://github.com/tesseract-ocr/tesseract)
-4) Ensure the Tesseract executable path is correctly set in the script:
-```bash
-pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
+4) Ensure the Tesseract executable path is correctly set in the script
 
 ## Usage
+1) Run the script
+2) Follow the on-scren instructions:
+
+      • Move your mouse to the top-left corner of the desired screen region and press `Shift`.
+
+      • Move your mouse to the bottom-right corner and press `Shift` again.
+
+      • The script will capture the region, save it as an image, and ask if you want to extract text using OCR.
+
+3) If you choose to extract text:
+
+      • You'll be prompted to select language `(ENG, DEU, SRP_LATN)`.
+
+      • The extracted text will be displayed in the console.
+  
+      • A .txt file containing the text will be saved in the `output/` directory.
