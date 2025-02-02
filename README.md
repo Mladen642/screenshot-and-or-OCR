@@ -25,6 +25,7 @@ A Python script that captures a screen region based on user-defined coordinates,
 2) Install the required dependencies
 3) Install Tesseract OCR (https://github.com/tesseract-ocr/tesseract)
 4) Ensure the Tesseract executable path is correctly set in the script
+5) Place tessdata folder(contains language support) inside pytesseract installation. Usualy: `C:\Program Files\Tesseract-OCR\tessdata`
 
 ## Usage
 1) Run the script
