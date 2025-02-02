@@ -30,7 +30,8 @@ print(f'Logged top left position at [red]{x,y}[/]\n')
 #Bottom right
 keyboard.wait('shift')
 i,j = pyautogui.position()
-bottom_right = (i,j); coordinates.append(bottom_right)
+bottom_right = (i,j)
+coordinates.append(bottom_right)
 print(f'Logged bottom right position at [red]{i,j}[/]\n')
 
 x = (coordinates[0][0]); y = (coordinates[0][1])
@@ -46,12 +47,13 @@ print(f'Image saved at location [green]"{path}"[/]\n')
 next=Prompt.ask('Would you like to attempt to read text from image via OCR? [teal][y/n][/]', choices=['y','n'], default="y")
 
 if next =='y':
-    text = pytesseract.image_to_string(path)
+    language = Prompt.ask("Choose language: ", default = 'eng', choices = ['eng','srp_latn', 'deu']); print()
+    text = pytesseract.image_to_string(path, lang=language)
     print(f'Here is the extracted text:\n[yellow]{text}')
     
     #Write OCR into .txt file
     path = path[3:-4]
-    with open(f"output/{path}.txt", "w") as f:
+    with open(f"output/{path}.txt", "w", encoding='utf-8') as f:
         for i in text:
             f.write(i)
 else:
