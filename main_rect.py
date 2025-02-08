@@ -38,8 +38,6 @@ class DrawRectangle:
 
     def on_release(self, event):
         now = datetime.now()
-        print(f"Rectangle from ({self.start_x}, {self.start_y}) to ({event.x}, {event.y})")
-
         self.root.destroy()  # Close the overlay after selection
 
         img = pyautogui.screenshot(region=(self.start_x,self.start_y,event.x-self.start_x, event.y - self.start_y))
