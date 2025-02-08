@@ -29,15 +29,21 @@ A Python script that captures a screen region based on user-defined coordinates,
 
 ## Usage
 1) Run the script
-2) Follow the instructions:
+2) Select region:
+
+   for `main.py`:
 
       • Move your mouse to the top-left corner of the desired screen region and press `Shift`.
 
       • Move your mouse to the bottom-right corner and press `Shift` again.
 
       • The script will capture the region, save it as an image and ask if you want to extract text using OCR.
+   
+   for `main_rect.py`:
 
-3) If you choose to extract text:
+    • Select region via mouse (click, drag, release).
+
+4) If you choose to extract text:
 
       • You'll be prompted to select language `(ENG, DEU, SRP_LATN)`.
 
